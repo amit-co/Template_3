@@ -72,11 +72,12 @@ export function Reservation() {
     };
 
     return (
-        <div className="flex  flex-row mt-10 w-full space-x-8">
-            
+        <div className="flex flex-col lg:flex-row mt-10 w-full space-x-2">
 
-                <div className="flex flex-col">
-                                <h1 className="text-white text-3xl mb-4 tracking-widest">RESERVE A TABLE</h1>
+
+                <div className="flex mr-2 lg:mr-20 flex-col">
+                                <h1 className="text-white text-2xl sm:text-3xl md:text-3xl lg:text-3xl mb-4 tracking-widest">RESERVE A TABLE</h1>
+
                 
                                 <p className="text-white tracking-widest">To Help Us Find The Best Table For You, Select The Preffered Party Size, Date, Date, And Time Of Your Reservation.</p>
                 
@@ -94,9 +95,9 @@ export function Reservation() {
                                     <FaRegCalendar className="absolute left-3 text-xl" />
                                 </div>
                                 <div className="relative flex items-center text-white border h-12">
-                                    <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-lg text-black outline-none bg-transparent">
-                                        {generateTimeOptions().map(time => (
-                                            <option key={time} value={time}>
+                                    <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-lg text-white outline-none bg-transparent">
+                            {generateTimeOptions().map(time => (
+                                <option key={time} value={time} className="bg-customDarkG">
                                                 {time}
                                             </option>
                                         ))}
@@ -104,9 +105,9 @@ export function Reservation() {
                                     <LuClock className="absolute left-3 text-xl" />
                                 </div>
                                 <div className="relative flex items-center border text-white h-12">
-                                    <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-lg outline-none text-black bg-transparent">
+                                    <select id="peopleSelect" value={noOfPeople} onChange={handleNoOfPeople} className="w-full pl-10 pr-4 text-lg outline-none text-white bg-transparent">
                                         {Array.from({ length: 19 }, (_, i) => i + 2).map(number => (
-                                            <option key={number} value={number}>{number} People</option>
+                                            <option key={number} value={number} className="bg-customDarkG">{number} People</option>
                                         ))}
                                     </select>
                                     <GoPeople className="absolute left-3 text-xl" />
@@ -121,8 +122,7 @@ export function Reservation() {
                     </div>
                
 
-            <img src={h1} className="w-6/12" />
-           
+            <img src={h1} className="w-full lg:w-6/12 mt-4 " />
             
            
         </div>

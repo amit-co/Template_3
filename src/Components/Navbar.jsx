@@ -48,7 +48,7 @@ export function Navbar() {
                     alt="Company Logo"
                     onClick={() => navigate("/")}
                 />
-                <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-8 xl:space-x-12">
+                <div className="hidden border px-16 py-10 md:flex md:items-center md:space-x-4 lg:space-x-8 xl:space-x-12">
                     {[
                         { to: "/", label: "HOME" },
                         { to: "/bookNow", label: "BOOK NOW" },
@@ -140,7 +140,7 @@ export function Navbar() {
             </div>
 
             {toggle && (
-                <div className="md:hidden bg-customGray text-customBrown text-center pb-8 space-x-1 text-xl z-10 absolute w-full"
+                <div className="md:hidden bg-customGray text-customBrown text-center pb-8 space-x-1 text-xl z-10 absolute w-3/12 lg:w-full"
                     style={{ backgroundImage: `url(${img})` }}
                 >
                     {[
