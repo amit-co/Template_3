@@ -2,10 +2,6 @@ import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { IoMenuOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-import img1 from "/icons/facebook.png";
-import img2 from "/icons/instagram.png";
-import img3 from "/icons/twitter.png";
-import img4 from "/icons/Call.png";
 import logo from "/7.png";
 import img from "/Textures/4523.png";
 
@@ -40,15 +36,15 @@ export function Navbar() {
     }, []);
 
     return (
-        <div className={`fixed top-0 left-0 right-0 z-10 w-full transition-transform duration-300 md:opacity-75 border border-customWhite ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'}`}>
-            <div className="flex justify-between items-center bg-customDarkG text-customWhite px-4 py-2 sm:px-6 sm:py-4">
+        <div className={`fixed top-0 left-0 right-0 z-10 w-full  transition-transform duration-300 md:opacity-75 border border-customWhite ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'}`}>
+            <div className="flex justify-between items-center bg-customDarkG text-customWhite  space-x-4  h-[120px] sm:px-6  sm:py-4">
                 <img
-                    className="w-28 sm:w-36 md:w-44 h-auto cursor-pointer border"
+                    className="w-28 sm:w-36 md:w-32 h-[80px] cursor-pointer border"
                     src={logo}
                     alt="Company Logo"
                     onClick={() => navigate("/")}
                 />
-                <div className="hidden border px-16 py-10 md:flex md:items-center md:space-x-4 lg:space-x-8 xl:space-x-12">
+                <div className="hidden border px-14 md:px-10  md:py-7 py-8 md:flex md:items-center md:space-x-4 lg:space-x-8 xl:space-x-12">
                     {[
                         { to: "/", label: "HOME" },
                         { to: "/bookNow", label: "BOOK NOW" },
@@ -140,8 +136,8 @@ export function Navbar() {
             </div>
 
             {toggle && (
-                <div className="md:hidden bg-customGray text-customBrown text-center pb-8 space-x-1 text-xl z-10 absolute w-3/12 lg:w-full"
-                    style={{ backgroundImage: `url(${img})` }}
+                <div className="md:hidden bg-customDarkG text-customWhite text-center pb-8 space-x-1 text-xl z-10 absolute w-full sm:w-3/12  border lg:w-full"
+                    
                 >
                     {[
                         { to: "/", label: "HOME" },

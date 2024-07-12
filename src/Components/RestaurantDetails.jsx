@@ -23,24 +23,24 @@ export function RestaurantDetails() {
                     </h1>
                     <button className="rounded-full  text-customWhite text-lg sm:text-xl md:text-2xl lg:text-3xl border-customWhite border-[1px] mx-auto px-3 py-2 mb-10">Find A Table</button>
                     <h1 className="mx-auto text-lg md:text-2xl sm:text-xl lg:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest">What's On Menu ?</h1>
-                    <div className="flex flex-col lg:flex-row space-x-4 mt-10 mb-10">
+                    <div className="flex  flex-col  sm:flex-row sm:space-x-4 lg:flex-row md:space-x-4 space-y-4 mt-10 mb-10 mx-auto">
                         <div className="relative group  overflow-hidden">
-                        <img src={img1} className="mb-4 w-[289px] lg:w-full h-[252px] lg:h-full transition duration-300 ease-in-out transform  hover:scale-105" />
-                        <div className="absolute top-0 right-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                        <img src={img1} className="mb-2 mt-4 w-[289px] lg:w-full md:h-full h-[252px] lg:h-full xl:h-[520px]  transition duration-300 ease-in-out transform  hover:scale-105" />
+                        <div className="absolute top-0 right-0 m-4 xl:m-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                             <h2 className="text-5xl">IN ROOM DINING</h2>
                             </div>
                             </div>
                        
                         <div className="flex flex-col space-y-4">
-                            <div className="relative group  overflow-hidden">
+                            <div className="relative group  overflow-hidden ">
                             <img src={img5} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105" />
-                            <div className="absolute top-0 right-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+                            <div className="absolute top-0 right-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                 <h2 className="text-5xl">BAR SNACKS</h2>
                                 </div>
                                 </div>
                             <div className="relative group  overflow-hidden ">
                                 <img src={img3} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105" />
-                                <div className="absolute top-0 right-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+                                <div className="absolute top-0 right-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-5xl">Dessert Menu</h2>
                                 </div>
                             </div>
@@ -48,13 +48,13 @@ export function RestaurantDetails() {
                         <div className="flex flex-col space-y-4">
                             <div className="relative group  overflow-hidden">
                                 <img src={img4} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105" />
-                                <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+                                <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-5xl">Cafe</h2>
                                 </div>
                             </div>
-                            <div className="relative group  overflow-hidden">
+                            <div className="relative group  overflow-hidden ">
                                 <img src={img2} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105" />
-                                <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out">
+                                <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-5xl">Beverage</h2>
                                 </div>
                             </div>
