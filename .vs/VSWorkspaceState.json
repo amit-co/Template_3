@@ -1,7 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\public",
+    "\\public\\About",
+    "\\public\\buttons",
+    "\\public\\Menu",
+    "\\src",
+    "\\src\\Components",
+    "\\src\\Pages",
+    "\\src\\utils"
   ],
-  "SelectedNode": "\\C:\\Users\\Muskan\\Source\\Repos\\Template_3",
+  "SelectedNode": "\\src\\Components\\Navbar.jsx",
   "PreviewInSolutionExplorer": false
 }

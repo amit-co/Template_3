@@ -8,7 +8,7 @@ import advisor from "/New/tripadvisor.png";
 export function AboutRestaurant(){
     return (
 
-        <div className="flex flex-col mx-auto">
+        <div className="flex flex-col mx-auto ">
             <div className=" flex flex-col px-8 w-full md:w-9/12   lg:mt-0 mx-auto  border-[2px]">
                 <div className="flex  flex-col lg:flex-row mt-10 w-full mx-auto space-x-2 sm:space-x-4 md:space-x-6 lg:space-x-8">
                     <img src={h1} className="w-12/12 lg:w-5/12 " />
@@ -27,7 +27,7 @@ export function AboutRestaurant(){
                    
                 
             </div>
-            <div className="flex flex-col border mx-auto h-[100px] px-10 md:w-9/12">
+            <div className="flex flex-col border mx-auto  h-[100px] px-10 md:w-9/12">
                 <h1 className="text-white text-center text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-widest mt-6">What Our Dinner Say About Us</h1>
                
             </div>

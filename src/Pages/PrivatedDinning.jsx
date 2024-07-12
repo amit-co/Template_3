@@ -108,32 +108,32 @@ export default function PrivateDinning() {
                           </h1>
                       <div className="h-[4px] bg-gradient-to-r from-transparent via-gray-400  to-transparent my-6"></div>
                       <p className="md:w-11/12 text-center mt-10 text-2xl  font-medium text-black-900 mx-auto">
-                    Welcome to OXBO, where culinary excellence meets unparalleled
-                    hospitality. Nestled in the heart of Walles, our restaurant offers a
-                    dynamic dining experience that celebrates the fusion of modern and
-                    traditional flavors. At OXBO, we pride ourselves on sourcing the finest
-                    local ingredients to craft innovative dishes that cater to a variety of
-                    palates. Whether you're indulging in our signature creations or
-                    exploring our seasonal specials, each meal is a journey of taste and
-                    texture. Our stylish yet cozy ambiance, complemented by exceptional
-                    service, ensures that every visit is memorable. Join us at OXBO and
-                    savor the art of fine dining.
-                  </p>
-                  <p className="md:w-9/12 text-center mx-auto text-2xl font-medium text-black-900 mt-5">
-                    Discover the perfect blend of comfort and sophistication in our
-                    thoughtfully designed space, where every detail is crafted to enhance
-                    your dining experience. From intimate dinners to lively gatherings, OXBO
-                    is the ideal setting for any occasion.
-          </p>
-          <div>
-                <div className="mt-2 flex items-center ml-10 " >
-                  <img className="h-auto max-w-full object-contain ml-3" src={img3}  />
-                  <h1 className="ml-5 text-2xl font-bold">Make A Reservation</h1>
-              </div>
+                        Welcome to OXBO, where culinary excellence meets unparalleled
+                        hospitality. Nestled in the heart of Walles, our restaurant offers a
+                        dynamic dining experience that celebrates the fusion of modern and
+                        traditional flavors. At OXBO, we pride ourselves on sourcing the finest
+                        local ingredients to craft innovative dishes that cater to a variety of
+                        palates. Whether you're indulging in our signature creations or
+                        exploring our seasonal specials, each meal is a journey of taste and
+                        texture. Our stylish yet cozy ambiance, complemented by exceptional
+                        service, ensures that every visit is memorable. Join us at OXBO and
+                        savor the art of fine dining.
+                      </p>
+                      <p className="md:w-9/12 text-center mx-auto text-2xl font-medium text-black-900 mt-5">
+                        Discover the perfect blend of comfort and sophistication in our
+                        thoughtfully designed space, where every detail is crafted to enhance
+                        your dining experience. From intimate dinners to lively gatherings, OXBO
+                        is the ideal setting for any occasion.
+                      </p>
+                      <div>
+                            <div className="mt-2 flex items-center ml-10 " >
+                              <img className="h-auto max-w-full object-contain ml-3" src={img3}  />
+                              <h1 className="ml-5 text-2xl font-bold">Make A Reservation</h1>
+                          </div>
 
-              <img class="h-auto max-w-full ml-10 object-contain" src={img2} />
+                          <img class="h-auto max-w-full ml-10 object-contain" src={img2} />
 
-            </div>
+                      </div>
           
           <div className="bg-repeat mb-3 mt-10 rounded-lg mx-10 py-10  object-contain" style={{ backgroundImage: `url(${img1})` }} >
                    <div className=" flex "></div>
@@ -206,7 +206,7 @@ export default function PrivateDinning() {
                                                   />
                                                 </div>
                                         <div className="md:w-4/12 flex flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="time">
+                                              <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="time">
                                                 TIME
                                               </label>
                                               <select
@@ -243,7 +243,7 @@ export default function PrivateDinning() {
                                               </select>
                                         </div>
                                         <div className="md:w-4/12 flex flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="people">
+                                          <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="people">
                                             PEOPLE
                                           </label>
                                           <select
@@ -278,7 +278,7 @@ export default function PrivateDinning() {
                        </div>
                        <div className="px-2 pb-5 w-9/12 mx-auto">
                                         <div className="flex mt-2 flex-col">
-                        <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="message">
+                                          <label className="block text-black-700 tracking-widest text-lg font-medium " htmlFor="message">
                                             MESSAGE
                                           </label>
                                               <textarea

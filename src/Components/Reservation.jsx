@@ -95,8 +95,8 @@ export function Reservation() {
                                     <FaRegCalendar className="absolute left-3 text-xl" />
                                 </div>
                                 <div className="relative flex items-center text-white border h-12">
-                                    <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-lg text-white outline-none bg-transparent">
-                            {generateTimeOptions().map(time => (
+                                      <select id="timingSelect" value={selectedTime} onChange={handleTimeChange} className="w-full pl-10 pr-4 text-lg text-white outline-none bg-transparent">
+                                        {generateTimeOptions().map(time => (
                                 <option key={time} value={time} className="bg-customDarkG">
                                                 {time}
                                             </option>
@@ -114,15 +114,15 @@ export function Reservation() {
                                 </div>
                                 <button onClick={clickHandler} className="w-full h-12 text-white text-lg font-semibold rounded border transition duration-300">
                                     Find a Table
-                    </button>
+                                </button>
 
-                    </div>
+                          </div>
                     
 
-                    </div>
+                </div>
                
 
-            <img src={h1} className="w-full lg:w-6/12 mt-4 " />
+                        <img src={h1} className="w-10/12 lg:w-6/12 mt-4 " />
             
            
         </div>
