@@ -21,7 +21,7 @@ export default function Home() {
     return (
         <div className="bg-customDarkG  w-full ">
             <div className="flex flex-col items-center justify-center w-full h-full  bg-cover border-2 " style={{ backgroundImage: `url(${imgA})` }}>
-                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest font-bold mt-32 sm:mt-32 md:mt-44">WELCOME TO OXBO</h1>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest font-bold mt-36 sm:mt-32 md:mt-44">WELCOME TO OXBO</h1>
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-customWhite  tracking-widest font-bold mt-8 sm:mt-16 md:mt-24 mb-4 sm:mb-6 md:mb-10 mx-auto">CAFE  |  BAR  |  DINING</h1>
                 <button className="rounded-full border text-customWhite text-lg sm:text-xl md:text-2xl lg:text-3xl border-customWhite border-2 mx-auto px-2 sm:px-3 py-1 sm:py-2">Find A Table</button>
                 <img src={Gif} className="object-contain w-[200px] md:w-[534px] rounded-lg mt-4 mb-4"/>
@@ -58,7 +58,7 @@ export default function Home() {
                                         </div>
                                         <div className="text-center w-full ">
                                             <MdEmail className="lg:text-2xl text-3xl mx-auto" />
-                                            <h1 className="text-sm lg:text-lg tracking-widest"> Info@hiltongroup.com</h1>
+                                            <h1 className="text-sm lg:text-lg mb-4 tracking-widest"> Info@hiltongroup.com</h1>
                                         </div>
                                     </div>
 
@@ -66,8 +66,8 @@ export default function Home() {
 
                                  
                                     <div className="flex w-full text-sm sm:text-base lg:text-lg  space-x-96 text-customWhite">
-                                              <div className="flex flex-col xl:flex-col place-items-start  sm:ml-48 md:ml-20 mt-4 ">
-                                                   <p className=" w-[220px] sm:w-[250px] xl:w-[300px] lg:w-[350px]">SIGN TO OUR NEWSLETTER FOR </p>
+                                              <div className="flex flex-col xl:flex-col place-items-start ml-16 sm:ml-48 md:ml-20 lg:ml-44 mt-4">
+                                                   <p className=" w-[220px] mt-4 sm:w-[250px] xl:w-[300px] lg:w-[350px]">SIGN TO OUR NEWSLETTER FOR </p>
                                                    <p> UPDATES AND SPECIAL DEALS.</p>
                                                                             <div className="mt-2 ">
                                                                                 <input
@@ -89,7 +89,7 @@ export default function Home() {
                                  
 
                                 <div className="flex flex-col items-center mx-auto mb-4 mt-4">
-                                    <h3 className=" text-customWhite text-4xl tracking-widest font-medium mb-2 ml-3">Follow Us</h3>
+                                    <h3 className=" text-customWhite md:text-3xl sm:text-2xl text-xl lg:text-4xl tracking-widest font-medium mt-2 mb-2 ml-3">Follow Us</h3>
                                     <div className="flex space-x-4 b">
                                         <a href="https://www.facebook.com/yourprofile">
                                             <img src={img1} />

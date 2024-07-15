@@ -1,15 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public",
-    "\\public\\About",
-    "\\public\\buttons",
-    "\\public\\Menu",
     "\\src",
-    "\\src\\Components",
-    "\\src\\Pages",
-    "\\src\\utils"
+    "\\src\\Components"
   ],
-  "SelectedNode": "\\src\\Components\\Navbar.jsx",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
