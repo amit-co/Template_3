@@ -16,13 +16,14 @@ export function RestaurantDetails() {
         <div>
             <div className=" lg:h-full mx-auto items-center lg:flex  ">
                
-                <div className="flex flex-col px-10 w-full md:w-9/12  mt-12 lg:mt-0 mx-auto  border-[2px]">
+                <div className="flex flex-col px-10 w-full md:w-9/12  mx-auto  border-[2px]">
                     <img src={img6} className="mx-auto mb-10 mt-6" alt="Restaurant" />
-                    <h1 className="hidden sm:block text-xl text-center font-medium tracking-widest text-customWhite mx-auto mb-10">
-                        Embark on a culinary journey with our diverse selection of restaurants, where every dish tells a story of flavor and creativity. From intimate cafes to upscale dining experiences, savor exquisite cuisine crafted by talented chefs using the finest ingredients. Whether you&apos;re craving traditional favorites or bold international flavors, our restaurants promise a gastronomic adventure that delights the senses and leaves a lasting impression.
+                    <h1 className="text-sm sm:text-base lg:text-xl text-center font-medium tracking-widest text-customWhite mx-auto mb-10">
+                        Embark on a culinary journey with our diverse selection of restaurants, where every dish tells a story of flavor and creativity. From intimate cafes to upscale dining experiences, savor exquisite cuisine crafted by talented chefs using the finest ingredients. 
                     </h1>
-                    <button className="rounded-full  text-customWhite text-lg sm:text-xl md:text-2xl lg:text-3xl border-customWhite border-[1px] mx-auto px-3 py-2 mb-10">Find A Table</button>
-                    <h1 className="mx-auto text-lg md:text-2xl sm:text-xl lg:text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest">What's On Menu ?</h1>
+                    <button className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-8">Learn More About Us</button>
+                    <button className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-10">Find A Table</button>
+                    <h1 className="mx-auto text-xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest">What's On Menu ?</h1>
                     <div className="flex  flex-col  sm:flex-row sm:space-x-4 lg:flex-row md:space-x-4 space-y-4 mt-10 mb-10 mx-auto">
                         <div className="relative group  overflow-hidden">
                         <img src={img1} className="mb-2 mt-4 w-[289px] lg:w-full md:h-full h-[252px] lg:h-full xl:h-[520px]  transition duration-300 ease-in-out transform  hover:scale-105" />

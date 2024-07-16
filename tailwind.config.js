@@ -26,7 +26,8 @@ export default {
             },
             screens: {
                 mediumLarge: "1080px",
-                mediumLarge2: "980px"
+                mediumLarge2: "980px",
+                mobile: "280px"
             },
             fontFamily: {
                 custom: ["CustomFont", "STIX+Two+Text"],

@@ -76,12 +76,12 @@ export function Reservation() {
 
 
                 <div className="flex mr-2 lg:mr-20 flex-col">
-                                <h1 className="text-white text-2xl sm:text-3xl md:text-3xl lg:text-3xl mb-4 tracking-widest">RESERVE A TABLE</h1>
+                                <h1 className="text-white text-xl sm:text-3xl md:text-3xl lg:text-3xl text-center mb-4 tracking-widest">RESERVE A TABLE</h1>
 
                 
-                                <p className="text-white tracking-widest">To Help Us Find The Best Table For You, Select The Preffered Party Size, Date, Date, And Time Of Your Reservation.</p>
+                                <p className="text-white text-center tracking-widest">To Help Us Find The Best Table For You, Select The Preffered Party Size, Date, Date, And Time Of Your Reservation.</p>
                 
-                          <div className="flex flex-col space-y-4 mt-4">
+                          <div className="flex flex-col px-4 space-y-4 mt-4">
                                 <div className="relative flex items-center border-gray-200 text-white border rounded-t h-12">
                                     <DatePicker
                                         selected={new Date(selectedDate)}
@@ -122,9 +122,10 @@ export function Reservation() {
                 </div>
                
 
-                        <img src={h1} className="w-10/12 lg:w-6/12 mt-4 " />
+                        <img src={h1} className="w-11/12 lg:w-6/12 mt-4 " />
             
            
         </div>
+       
     );
 }

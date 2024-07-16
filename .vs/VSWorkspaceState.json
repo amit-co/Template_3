@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\Components"
+    "\\src\\Components",
+    "\\src\\Pages",
+    "\\src\\utils"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\src\\Pages\\Gallery.jsx",
   "PreviewInSolutionExplorer": false
 }
