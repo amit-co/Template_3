@@ -1,11 +1,13 @@
 import { RestrauntLocation } from "./RestrauntLocation";
+import { useNavigate } from "react-router-dom";
 import { Timings } from "./Timings";
 import h1 from "/New/restaurant 1.png";
 import logo3 from "/New/logo3.png";
 import google from "/New/google.png";
 import advisor from "/New/tripadvisor.png";
 
-export function AboutRestaurant(){
+export function AboutRestaurant() {
+    const navigate = useNavigate();
     return (
 
         <div className="flex flex-col mx-auto ">
@@ -20,7 +22,7 @@ export function AboutRestaurant(){
                             To Accommodate Gatherings And Groups, With Clever Partitions Or Sliding Panels That Can Be Used To Create Smaller Areas With A Cozier Feel . Seating
                             Arrangements Reflect And Respect Single Diners And Drinkers Too.
                         </p>
-                        <button className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 ">Make a Request</button>
+                        <button onClick={() => navigate("/privateDinning")} className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 ">Make a Request</button>
                     </div>
                 </div>
                 <Timings />

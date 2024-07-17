@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { Reservation } from "./Reservation";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
-import img from "/Textures/4455.jpg";
+import { useNavigate } from "react-router-dom";
+
 export function Timings() {
-   
+    const navigate = useNavigate();
     return (
                 <div className="justify space-y-1">
                             
@@ -16,9 +14,9 @@ export function Timings() {
                                 </div>
             </div>
             <div className="text-center">
-                <button className="text-customWhite text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-widest border-customWhite border-[1px] mx-auto px-8 py-3 mb-8">Gift Voucher</button>
-                <h1 className="mx-auto text-sm md:text-base lg:text-lg text-customWhite ml-2 lg:ml-52 mr-2 lg:mr-52 tracking-widest mb-6 lg:mb-10">Give the ultimate gift to someone special with Exciting experience.
-                    This voucher is valid 48 hours after purchase, for 12 months.</h1>
+                <button onClick={() => navigate("/giftVoucher")} className="text-customWhite text-lg sm:text-xl md:text-2xl lg:text-3xl tracking-widest border-customWhite border-[1px] mx-auto px-8 py-3 mb-8">Gift Voucher</button>
+                <p className="mx-auto text-sm w-10/12 md:text-base lg:text-lg text-customWhite  tracking-widest mb-6 lg:mb-10">Give the ultimate gift to someone special with Exciting experience.
+                    This voucher is valid 48 hours after purchase, for 12 months.</p>
             </div>
                 </div>
   );

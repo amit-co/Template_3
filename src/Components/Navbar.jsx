@@ -37,7 +37,7 @@ export function Navbar() {
     }, []);
 
     return (
-        <div className={`fixed top-0 left-0 right-0 w-full  transition-transform duration-300 md:opacity-75 border border-customWhite ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'}`}>
+        <div className={`fixed top-0 left-0 right-0 w-full z-50 transition-transform duration-300 md:opacity-75 border border-customWhite ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'}`}>
             <div className="flex items-center bg-customDarkG text-customWhite   h-[120px] ">
                 <img
                     className="w-40 h-[120px] cursor-pointer border"
