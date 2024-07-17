@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex items-center">
-                    <img src={Wlogo} className="w-[300px]  object-contain" />
+                    <img src={Wlogo} className="w-[300px] mt-10 object-contain" />
                 </div>
 
 

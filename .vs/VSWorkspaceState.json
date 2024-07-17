@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public\\New",
     "\\src",
     "\\src\\Components",
     "\\src\\Pages",
     "\\src\\utils"
   ],
-  "SelectedNode": "\\src\\Pages\\Gallery.jsx",
+  "SelectedNode": "\\src\\Components\\Menus.jsx",
   "PreviewInSolutionExplorer": false
 }
