@@ -5,7 +5,7 @@ import { RestaurantDetails } from "../Components/RestaurantDetails";
 import imgA from "/New/3bg.png";
 import imgB from "/New/uns.png";
 import Gif from "/New/ad.gif";
-import Footer from "../Components/Footer";
+import { Footer } from "../Components/Footer";
 
 
 export default function Home() {
