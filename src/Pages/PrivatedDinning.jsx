@@ -1,4 +1,3 @@
-import { Quote } from "../Components/Quote";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { useState } from "react";
@@ -6,8 +5,6 @@ import axios from "axios";
 import { config } from "../config";
 import { toast } from "react-toastify";
 import { z } from "zod";
-import img1 from "/Textures/4523.png";
-import img2 from "/Textures/Vector 82.png";
 import img3 from "/New/knife.png";
 
 
@@ -93,31 +90,27 @@ export default function PrivateDinning() {
 
     return (
         
-        <div className="bg-customDarkG bg-cover pb-10 ">
+        <div className="bg-customDarkG bg-cover ">
 
-            <div className="flex flex-col px-10 w-full md:w-9/12  mx-auto  border-[2px] pb-10">
-              <div className="flex flex-col items-center mt-4" >
-                <img className="w-24 object-contain " src={img3} />
-                <h1 className="text-4xl tracking-widest text-white font-semibold mt-2">Private Dining</h1>
-                </div>
-                <div className="flex mx-auto w-6/12 mt-4">
-                    <p className="text-sm sm:text-base lg:text-xl text-center font-medium tracking-widest text-customWhite mx-auto mb-10">Our Spaces Are Large Enough To Accomodate Gatherings And Groups With Clever Partitions Or Sliding Panels That Can Be
-                    Used To Create Smaller Areas With A Cozier Feel. Seating Arrangements Reflect And Respect Single Diners And Drinkers Too.</p>
-                </div>       
+            <div className="flex flex-col px-10 w-full md:w-9/12  mx-auto pt-36  border-l-[2px] border-r-[2px] pb-10">
+                                  <div className="flex flex-col items-center mt-4" >
+                                    <img className="w-24 object-contain " src={img3} />
+                                    <h1 className="text-4xl tracking-widest text-white font-semibold mt-2">Private Dining</h1>
+                                  </div>
+                                <div className="flex mx-auto w-7/12 mt-4">
+                                    <p className="text-sm sm:text-base lg:text-xl text-center font-medium tracking-widest text-customWhite mx-auto mb-10">Our Spaces Are Large Enough To Accomodate Gatherings And Groups With Clever Partitions Or Sliding Panels That Can Be
+                                    Used To Create Smaller Areas With A Cozier Feel. Seating Arrangements Reflect And Respect Single Diners And Drinkers Too.</p>
+                                </div>       
 
                       
-          
-                      <div className="flex flex-col w-full mx-auto items-center" >
-                  
-          
-                             <div className="flex space-x-10 ">
-                                   <div className="w-7/12 flex flex-col">
-                                      <div className="flex justify-between">
+
+                <div className="flex w-full mx-auto justify-center ">
+                    <form className="md:w-8/12">
+                             <div className="flex md:space-x-10 md:ml-20 flex-wrap mb-6">
+                                 <div className="w-full md:w-5/12 mb-6 md:mb-0">
                                         <label className="block text-white tracking-widest text-lg font-medium ">
                                            FIRST NAME
-                                          </label>
-                         
-                                    </div>
+                                        </label>
                                   <input
                                     name="fname"
                                     onChange={changeHandler}
@@ -128,14 +121,14 @@ export default function PrivateDinning() {
                                   />
                                   {errors.fname && <h1 className="text-red-500 text-sm">{errors.fname}</h1>}
           
-                                    </div>
-                                    <div className="w-7/12 flex flex-col">
-                                        <div className="flex justify-between">
+                                 </div>
+                            <div className="w-full md:w-5/12 md:ml-4">
+                                       
                                             <label className="block text-white tracking-widest text-lg font-medium ">
                                                LAST NAME
                                             </label>
 
-                                        </div>
+                                      
                                         <input
                                             name="lname"
                                             onChange={changeHandler}
@@ -147,14 +140,15 @@ export default function PrivateDinning() {
                                         {errors.lname && <h1 className="text-red-500 text-sm">{errors.lname}</h1>}
 
                                     </div>
-                      
-                           
                              </div>
-                                  <div className="mt-6 flex space-x-10 ">
-                                           <div className="w-7/12 flex flex-col">
-                                                  <label className="block text-white tracking-widest text-lg font-medium ">
-                                                    SELECT DATE
-                                                  </label>
+                        <div className="flex md:space-x-10 md:ml-20 flex-wrap mb-6">
+                            <div className="w-full md:w-5/12 mb-6 md:mb-0">
+                                               
+                                                    <label className="block text-white tracking-widest text-lg font-medium ">
+                                                        SELECT DATE
+                                                    </label>
+
+                                                
                                                   <DatePicker
                                                     name="date"
                                                     selected={formData.date}
@@ -163,16 +157,17 @@ export default function PrivateDinning() {
                                                     className="appearance-none bg-clip-text text-white px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
                                                   />
                                            </div>
-                                        <div className="w-7/12 flex flex-col">
-                                              <label className="block text-white tracking-widest text-lg font-medium ">
-                                               SELECT TIME
-                                              </label>
+                            <div className="w-full md:w-5/12 mb-6 md:mb-0">
+                                                <label className="block text-white tracking-widest text-lg font-medium ">
+                                                       SELECT TIME
+                                                </label>
+                                            
                                               <select
                                                 id="time"
                                                 value={formData.time}
                                                 name="time"
                                                 onChange={changeHandler}
-                                                className="appearance-none bg-clip-text text-white px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
+                                                className="appearance-none bg-clip-text text-white md:px-[73px] px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
                                               >
                                                     {[
                                                       "16:00",
@@ -190,8 +185,8 @@ export default function PrivateDinning() {
                                                       "22:00",
                                                       "22:30",
                                                       "23:00",
-                                                    ].map((time) => (
-                                                          <option key={time} value={time}>
+                                    ].map((time) => (
+                                        <option key={time} value={time} className="bg-customDarkG">
                                                                {new Date(`1970-01-01T${time}Z`).toLocaleTimeString([], {
                                                                     hour: "2-digit",
                                                                     minute: "2-digit",
@@ -202,8 +197,8 @@ export default function PrivateDinning() {
                                         </div>
                                        
                                   </div>
-                                   <div className="mt-6 flex space-x-8 ">
-                                        <div className="w-7/12 flex flex-col">
+                        <div className="flex md:space-x-10 md:ml-20 flex-wrap mb-6">
+                            <div className="w-full md:w-5/12 mb-6 md:mb-0">
                                             <label className="block text-white tracking-widest text-lg font-medium " >
                                                 NUMBER OF GUEST
                                             </label>
@@ -212,16 +207,16 @@ export default function PrivateDinning() {
                                                 name="people"
                                                 value={formData.people}
                                                 onChange={changeHandler}
-                                                className="appearance-none bg-clip-text text-white px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
+                                    className="appearance-none bg-clip-text text-white md:px-[73px] px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
                                             >
-                                                {Array.from({ length: 19 }, (_, i) => i + 2).map((number) => (
-                                                    <option key={number} value={number}>
+                                    {Array.from({ length: 19 }, (_, i) => i + 2).map((number) => (
+                                        <option key={number} value={number} className="bg-customDarkG">
                                                         {number} People
                                                     </option>
                                                 ))}
                                             </select>
                                         </div>
-                                        <div className="w-7/12 flex flex-col">
+                            <div className="w-full md:w-5/12 mb-6 md:mb-0">
                                           <label className="block text-white tracking-widest text-lg font-medium " >
                                             SELECT OCCASION
                                           </label>
@@ -236,7 +231,7 @@ export default function PrivateDinning() {
                                         </div>
                         
                                    </div>
-                                     <div className="px-2 pb-5 w-8/12 px-20 mt-6">
+                                     <div className=" pb-5 w-10/12  mt-4 ml-10 px-10">
                                         <div className="flex mt-2 flex-col">
                                           <label className="block text-white tracking-widest text-lg font-medium " >
                                             RESERVATION NOTE
@@ -251,15 +246,15 @@ export default function PrivateDinning() {
                                               ></textarea>
                                         </div>
                                      </div>
-                                      <div className="flex w-9/12 px-2  mx-auto justify-center">
-                                                <button onClick={formHandler} className="border rounded-lg font-medium  md:px-14 px-7 py-2 md:text-lg text-white transition-all duration-300">
+                                      
+                                                <button onClick={formHandler} className="border rounded-lg font-medium tracking-widest md:ml-20 px-8  py-2 md:text-lg text-customWhite transition-all duration-300">
                                                   Find A Table
                                                 </button>
-                                      </div>
+                                     
           
-                </div>
+                </form>
                 
-          
+                </div>
             </div>
         </div>
   );
