@@ -36,148 +36,197 @@ export function Navbar() {
         };
     }, []);
 
-    return (
-        <div className={`fixed top-0 left-0 right-0 w-full  transition-transform duration-300 md:opacity-75 border border-customWhite ${isScrolled ? 'bg-opacity-90' : 'bg-opacity-100'}`}>
-            <div className="flex items-center bg-customDarkG text-customWhite   h-[120px] ">
-                <img
-                    className="w-40 h-[120px] cursor-pointer border"
-                    src={logo}
-                    alt="Company Logo"
-                    onClick={() => navigate("/")}
-                />
-                <h1 className="tracking-widest text-3xl ml-10 w-[850px]">OXBO</h1>
 
-                <div className="border text-xl md:flex items-center md:space-x-4 lg:space-x-8 xl:space-x-12">
-                    {[
-                        
-                        { to: "/reservation", label: "RESERVATION" },
+
+    return (
+        <div className={`fixed top-0 left-0 right-0 transition-transform duration-300`}>
+            <div className={`bg-repeat bg-customDarkG text-white flex px-4 transition-opacity duration-300`}
+                
+            >
+                
+                    <img
+                        className="md:w-[180px] border py-10 sm:w-[130px] w-[150px] "
+                        src={logo}
+                        alt="Company Logo"
+                        onClick={() => navigate("/")}
+                />
+                <h1 className="tracking-widest hidden text-3xl ml-10 w-[850px]">OXBO</h1>
+
+               
+                <div className="absolute right-0 md:flex text-3xl text-customBrown hidden space-x-2 2xl:mr-8 mt-10">
+                    <img src={img1}
+                        className="w-[30px]" />
                     
-                       
-                    ].map((navItem) => (
-                        <Link
-                            key={navItem.to}
-                            to={navItem.to}
-                            className={`relative ml-8 ${selectedNav === navItem.to ? 'cursor-pointer' : 'cursor-default'}`}
-                            onClick={() => handleNavClick(navItem.to)}
-                        >
-                            <h1>{navItem.label}</h1>
-                            <div className={`w-full absolute ${selectedNav === navItem.to ? 'block' : 'hidden'} h-[4px] bg-customWhite`}></div>
-                        </Link>
-                    ))}
-                    
-                    <div
-                        className={`relative py-11 px-14 border ${selectedNav === '/gallery' ? 'cursor-pointer' : 'cursor-default'}`}
-                        onClick={() => handleNavClick('/gallery')}
-                        onMouseEnter={() => setDisplayGallery(true)}
-                        onMouseLeave={() => setDisplayGallery(false)}
+                </div> 
+                
+                <div>
+                    <div className="text-white">
+                        {toggle ? (
+                            <RxCross2
+                                onClick={() => setToggle(false)}
+                                className="md:hidden cursor-pointer text-4xl"
+                            />
+                        ) : (
+                            <IoMenuOutline
+                                onClick={() => setToggle(true)}
+                                className="md:hidden cursor-pointer text-3xl"
+                            />
+                        )}
+                    </div>
+                </div>
+            </div>
+            
+
+            <div className={` bg-repeat w-full transition-all duration-500 ease-in-out text-customBrown text-center pb-8 space-x-1 text-xl bg-customGray z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
+                style={{ backgroundImage: `url(${img})` }}
+            >
+                <Link to="/" className="cursor-pointer ">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
                     >
-                        <h1 onClick={() => navigate("/gallery")}>GALLERY</h1>
-                        <div className={`w-full absolute ${selectedNav === '/gallery' ? 'block' : 'hidden'} h-[4px] bg-customWhite`}></div>
-                        {displayGallery && (
+                        HOME
+                    </h1>
+                </Link>
+                <Link to="/bookNow" className="w-fit mx-auto relative cursor-pointer">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        BOOK NOW
+                    </h1>
+                </Link>
+
+                <Link to="/menu" className="w-fit mx-auto cursor-pointer relative">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        MENU
+                    </h1>
+                </Link>
+                <Link
+                    to="/venue"
+                    onMouseEnter={() => setDisplayVenue(true)}
+                    onMouseLeave={() => setDisplayVenue(false)}
+                    className="cursor-pointer"
+                >
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        VENUE
+                    </h1>
+                    {displayVenue && (
+                        <div
+                            onMouseEnter={() => setDisplayVenue(true)}
+                            onMouseLeave={() => setDisplayVenue(false)}
+                            className="bg-repeat rounded-md flex shadow-md flex-col z-10 p-2 space-y-3 absolute left-1/2 transform -translate-x-1/2 w-[60vw]"
+                            style={{ backgroundImage: `url(${img})` }}
+                        >
+                            <Link onClick={() => setToggle(false)}
+                                to="/venue/restaurant"
+                                className="hover:text-customPink transition-all duration-100"
+                            >
+                                RESTAURANT
+                            </Link>
+                            <Link onClick={() => setToggle(false)}
+                                to="/venue/bar"
+                                className="hover:text-customPink transition-all duration-100"
+                            >
+                                BAR
+                            </Link>
+                            <Link onClick={() => setToggle(false)}
+                                to="/venue/cafe"
+                                className="hover:text-customPink transition-all duration-100"
+                            >
+                                CAFE
+                            </Link>
+                            <Link onClick={() => setToggle(false)}
+                                to="/venue/ird"
+                                className="hover:text-customPink transition-all duration-100"
+                            >
+                                IRD
+                            </Link>
+                            <RxCross2 onClick={() => setDisplayVenue(false)} className="absolute text-3xl top-[-7px] right-3" />
+
+                        </div>
+                    )}
+                </Link>
+                <Link to="/privateDinning" className="relative cursor-pointer">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        PRIVATE DINNING
+                    </h1>
+                </Link>
+                <Link to="/giftVoucher" className="relative cursor-pointer">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        GIFT VOUCHER
+                    </h1>
+                </Link>
+                <Link to="/contact" className="relative cursor-pointer">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        CONTACT
+                    </h1>
+                </Link>
+                <Link to="/gallery" onMouseEnter={() => setDisplayGallery(true)} onMouseLeave={() => setDisplayGallery(false)} className="relative cursor-pointer">
+                    <h1
+                        className={` hover:text-customPink`}
+                        onClick={() => setToggle(false)}
+                    >
+                        GALLERY
+                    </h1>
+                    {displayGallery && (
+                        <div className="relative">
                             <div
                                 onMouseEnter={() => setDisplayGallery(true)}
                                 onMouseLeave={() => setDisplayGallery(false)}
-                                className="bg-repeat flex flex-col z-10 p-2 space-y-3 absolute w-48 bg-white text-black shadow-lg"
+                                className="bg-repeat rounded-md flex shadow-md flex-col z-10 p-2 space-y-3 absolute left-1/2 transform -translate-x-1/2 w-[60vw]"
                                 style={{ backgroundImage: `url(${img})` }}
                             >
-                                {[
-                                    { to: "/gallery/food", label: "FOOD" },
-                                    { to: "/gallery/drinks", label: "DRINKS" },
-                                    { to: "/gallery/teams", label: "TEAMS" },
-                                ].map((subNavItem) => (
-                                    <Link
-                                        key={subNavItem.to}
-                                        to={subNavItem.to}
-                                        className="hover:text-customOrange transition-all duration-100"
-                                        onClick={() => setToggle(false)}
-                                    >
-                                        {subNavItem.label}
-                                    </Link>
-                                ))}
+                                <Link onClick={() => setToggle(false)}
+                                    to="/gallery/food"
+                                    className="hover:text-customPink transition-all duration-100"
+                                >
+                                    FOOD
+                                </Link>
+                                <Link onClick={() => setToggle(false)}
+                                    to="/gallery/drinks"
+                                    className="hover:text-customPink transition-all duration-100"
+                                >
+                                    DRINKS
+                                </Link>
+                                <Link onClick={() => setToggle(false)}
+                                    to="/gallery/teams"
+                                    className="hover:text-customPink transition-all duration-100"
+                                >
+                                    TEAM
+                                </Link>
+                                <RxCross2 onClick={() => setDisplayGallery(false)} className="absolute text-3xl top-[-7px] right-3" />
+
                             </div>
-                        )}
-                    </div>
+                        </div>
 
-                </div>
-                <button className="md:hidden" onClick={() => setToggle(!toggle)}>
-                    {toggle ? <RxCross2 className="text-2xl ml-28 " /> : <IoMenuOutline className="text-2xl ml-28" />}
-                </button>
-
-                <img className="ml-14 mr-12" src={img1} alt="Call Center" />
-
+                    )}
+                </Link>
+                <Link to="/about" className="relative cursor-pointer">
+                    <h1
+                        className="hover:text-customPink"
+                        onClick={() => setToggle(false)}
+                    >
+                        ABOUT
+                    </h1>
+                </Link>
             </div>
 
-            {toggle && (
-                <div className="md:hidden bg-customDarkG text-customWhite text-center pb-8 space-x-1 space-y-5 text-xl z-10 absolute w-full sm:w-3/12  border lg:w-full"
-                    
-                >
-                    {[
-                        { to: "/", label: "HOME" },
-                        { to: "/bookNow", label: "BOOK NOW" },
-                        { to: "/menu", label: "MENU" },
-                        { to: "/venue", label: "VENUE" },
-                        { to: "/privateDinning", label: "PRIVATE DINING" },
-                        { to: "/giftVoucher", label: "GIFT VOUCHER" },
-                        { to: "/contact", label: "CONTACT" },
-                        { to: "/gallery", label: "GALLERY" },
-                        { to: "/about", label: "ABOUT" },
-                    ].map((navItem) => (
-                        <Link
-                            key={navItem.to}
-                            to={navItem.to}
-                            className="block"
-                            onClick={() => setToggle(false)}
-                        >
-                            <h1 className="hover:text-customPink">{navItem.label}</h1>
-                        </Link>
-                    ))}
-                    {displayVenue && (
-                        <div className="bg-repeat rounded-md flex shadow-md flex-col z-10 p-2 space-y-3 absolute left-1/2 transform -translate-x-1/2 w-[60vw]"
-                            style={{ backgroundImage: `url(${img})` }}
-                        >
-                            {[
-                                { to: "/venue/restaurant", label: "RESTAURANT" },
-                                { to: "/venue/bar", label: "BAR" },
-                                { to: "/venue/cafe", label: "CAFE" },
-                                { to: "/venue/ird", label: "IRD" },
-                            ].map((subNavItem) => (
-                                <Link
-                                    key={subNavItem.to}
-                                    to={subNavItem.to}
-                                    className="hover:text-customPink transition-all duration-100"
-                                    onClick={() => setToggle(false)}
-                                >
-                                    {subNavItem.label}
-                                </Link>
-                            ))}
-                            <RxCross2 onClick={() => setDisplayVenue(false)} className="absolute text-3xl top-[-7px] right-3" />
-                        </div>
-                    )}
-                    {displayGallery && (
-                        <div className="relative">
-                            <div className="bg-repeat rounded-md flex shadow-md flex-col z-10 p-2 space-y-3 absolute left-1/2 transform -translate-x-1/2 w-[60vw]"
-                                style={{ backgroundImage: `url(${img})` }}
-                            >
-                                {[
-                                    { to: "/gallery/food", label: "FOOD" },
-                                    { to: "/gallery/drinks", label: "DRINKS" },
-                                    { to: "/gallery/teams", label: "TEAMS" },
-                                ].map((subNavItem) => (
-                                    <Link
-                                        key={subNavItem.to}
-                                        to={subNavItem.to}
-                                        className="hover:text-customPink transition-all duration-100"
-                                        onClick={() => setToggle(false)}
-                                    >
-                                        {subNavItem.label}
-                                    </Link>
-                                ))}
-                                <RxCross2 onClick={() => setDisplayGallery(false)} className="absolute text-3xl top-[-7px] right-3" />
-                            </div>
-                        </div>
-                    )}
-                </div>
-            )}
         </div>
     );
 }
