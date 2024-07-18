@@ -1,12 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\public\\New",
     "\\src",
     "\\src\\Components",
     "\\src\\Pages",
     "\\src\\utils"
   ],
-  "SelectedNode": "\\src\\Pages\\PrivatedDinning.jsx",
   "PreviewInSolutionExplorer": false
 }

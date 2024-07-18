@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 
 const menuArray = [
     { small: "/New/Rectangle 35.png", large: "/Pdf/IRD-Menu.jpg", title: "In Room Dining" },
-    { small: "/FoodImages/Food10.jpeg", large: "/Pdf/CafeMenu.png", title: "Cafe Menu" },
+    { small: "/FoodImages/Food10.jpeg", large: "/Pdf/CafeMenu.jpg", title: "Cafe Menu" },
     { small: "/drinksImages/Drinks6.jpeg", large: "/FoodImages/BarSnacks.jpg", title: "Bar Menu" },
-    { small: "/FoodImages/Food11.jpeg", large: "/Pdf/CafeKitchen.png", title: "Cafe Kitchen" },
+    { small: "/FoodImages/Food11.jpeg", large: "/Pdf/CafeKitchen.jpg", title: "Cafe Kitchen" },
     
     
 ];
@@ -40,7 +40,7 @@ export default function Menu({ page }) {
     };
 
     return (
-        <div className="bg-customDarkG pt-28" >
+        <div className="bg-customDarkG pt-28 " >
             <div
                 className={`flex flex-col sm:flex py-16 bg-cover ${page === "Menu" ? "opacity-100" : "opacity-100"} `}
             >
@@ -54,8 +54,8 @@ export default function Menu({ page }) {
                                 className="flex flex-col cursor-pointer  w-64 md:w-80 lg:w-[400px] p-4"
                                 onClick={() => handleMenuOpen(item.large)}
                             >
-                                <h2 className="text-3xl text-white mb-2">{item.title}</h2>
-                                <img src={item.small} alt={`Menu item ${index + 1}`} />
+                                <h2 className="text-3xl text-white px-14 mb-2">{item.title}</h2>
+                                <img src={item.small} alt={`Menu item ${index + 1}`} className="w-10/12 h-80 rounded-lg" />
                             </div>
                         ))}
                     </div>
@@ -66,8 +66,8 @@ export default function Menu({ page }) {
                                 className="flex flex-col cursor-pointer w-64 md:w-80 lg:w-[400px] p-4"
                                 onClick={() => handleMenuOpen(item.large)}
                             >
-                                <h2 className="text-3xl text-white mb-2">{item.title}</h2>
-                                <img src={item.small} alt={`Menu item ${index + 3}`} />
+                                <h2 className="text-3xl text-white px-16 mb-2">{item.title}</h2>
+                                <img src={item.small} alt={`Menu item ${index + 3}`} className="w-10/12 h-80 rounded-lg"/>
                             </div>
                         ))}
                     </div>

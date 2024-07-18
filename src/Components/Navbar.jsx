@@ -39,7 +39,7 @@ export function Navbar() {
 
 
     return (
-        <div className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 border` }>
+        <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-transform duration-300 border` }>
             <div className={`bg-repeat bg-customDarkG text-white  flex px-4 transition-opacity duration-300`} >
                 
                     <img
