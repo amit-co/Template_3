@@ -20,6 +20,8 @@ export function Navbar() {
         setSelectedNav(path);
     };
 
+   
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -36,7 +38,12 @@ export function Navbar() {
         };
     }, []);
 
-
+    const scrollToEnd = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: 'smooth'
+        });
+    };
 
     return (
         <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-transform duration-300 border` }>
@@ -73,9 +80,9 @@ export function Navbar() {
                         <div className="border-l border-r px-10 hidden sm:block">
                             <button onClick={() => navigate("/gallery")} className="text-4xl mt-10">Gallery</button>
                         </div>
-                        <div className="absolute right-1 text-3xl px-6 mt-10 hidden sm:flex 2xl:mr-8">
-                            <img src={img1} className="w-[50px]" onClick={() => navigate("/contact")} />
-                        </div>
+                            <div className="absolute right-1 text-3xl px-6 mt-10 hidden sm:flex 2xl:mr-8">
+                            <img src={img1} className="w-[50px]" onClick={scrollToEnd} />
+                            </div>
                     </div>
                 </div>
 

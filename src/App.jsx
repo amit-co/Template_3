@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import React, { useState } from "react";
+import React from "react";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Analytics } from "@vercel/analytics/react"
 import { lazy, Suspense } from "react";
@@ -29,12 +31,21 @@ import { Honest } from "./Components/Honest";
 
 
 function App() {
+    const ScrollToTop = () => {
+        const { pathname } = useLocation();
+
+        useEffect(() => {
+            window.scrollTo(0, 0);
+        }, [pathname]);
+
+        return null;
+    };
 
     return (
         <div className="relative font-customFont">
-
+            
             <BrowserRouter>
-
+                <ScrollToTop />
                 <Navbar />
 
                 <Routes>
@@ -62,14 +73,13 @@ function App() {
                     <Route path="/honest" element={<Suspense fallback={<h1>Loading...</h1>}><Honest /></Suspense>} />
                 </Routes>
 
-                <Footer />
+                <Footer  />
                 <SpeedInsights />
                 <Analytics />
 
-            </BrowserRouter>
-        </div>
-
-
+                </BrowserRouter>
+                </div>
+       
     );
 }
 

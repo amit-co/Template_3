@@ -11,6 +11,10 @@ import "../utils//custom-slick-dots.css";
 
 export function RestaurantDetails() {
     const navigate = useNavigate();
+    const clickHandler = () => {
+        window.location.href = 'https://reserve-ocean-website.vercel.app/restaurantDetail/Chon%20Thai%20Cuisine';
+    };
+
     return (
         <div>
             <div className=" lg:h-full mx-auto items-center  lg:flex  ">
@@ -21,7 +25,7 @@ export function RestaurantDetails() {
                         Embark on a culinary journey with our diverse selection of restaurants, where every dish tells a story of flavor and creativity. From intimate cafes to upscale dining experiences, savor exquisite cuisine crafted by talented chefs using the finest ingredients. 
                     </h1>
                     <button onClick={() => navigate("/menu")} className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-8">Learn More About Us</button>
-                    <button className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-10">Find A Table</button>
+                    <button onClick={clickHandler} className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-10">Find A Table</button>
                     <h1 className="mx-auto text-xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest">What's On Menu ?</h1>
                     <div className="flex  flex-col  sm:flex-row sm:space-x-4 lg:flex-row md:space-x-4 space-y-4 mt-10 mb-10 mx-auto ">
                         <div className="relative group  overflow-hidden">
