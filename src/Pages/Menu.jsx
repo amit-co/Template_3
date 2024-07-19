@@ -44,18 +44,18 @@ export default function Menu({ page }) {
             <div
                 className={`flex flex-col sm:flex py-16 bg-cover ${page === "Menu" ? "opacity-100" : "opacity-100"} `}
             >
-                <h1 className="text-6xl text-white mx-auto">What's On Menu?</h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl text-white mx-auto">What's On Menu?</h1>
 
                 <div className="w-full mt-20">
-                    <div className="flex flex-wrap  justify-center gap-5 mb-12">
+                    <div className="flex flex-wrap justify-center gap-5 mb-1 lg:mb-12">
                         {menuArray.slice(0, 2).map((item, index) => (
                             <div
                                 key={index}
-                                className="flex flex-col cursor-pointer  w-64 md:w-80 lg:w-[400px] p-4"
+                                className="flex flex-col cursor-pointer  w-full lg:w-[450px] p-10"
                                 onClick={() => handleMenuOpen(item.large)}
                             >
-                                <h2 className="text-3xl text-white px-14 mb-2">{item.title}</h2>
-                                <img src={item.small} alt={`Menu item ${index + 1}`} className="w-10/12 h-80 rounded-lg" />
+                                <h2 className="text-3xl sm:text-5xl lg:text-3xl text-white px-10 lg:px-20 mb-2">{item.title}</h2>
+                                <img src={item.small} alt={`Menu item ${index + 1}`} className="w-full h-full lg:h-80 rounded-lg" />
                             </div>
                         ))}
                     </div>
@@ -63,11 +63,11 @@ export default function Menu({ page }) {
                         {menuArray.slice(2, 4).map((item, index) => (
                             <div
                                 key={index + 2}
-                                className="flex flex-col cursor-pointer w-64 md:w-80 lg:w-[400px] p-4"
+                                className="flex flex-col cursor-pointer w-full lg:w-[450px] p-10"
                                 onClick={() => handleMenuOpen(item.large)}
                             >
-                                <h2 className="text-3xl text-white px-16 mb-2">{item.title}</h2>
-                                <img src={item.small} alt={`Menu item ${index + 3}`} className="w-10/12 h-80 rounded-lg"/>
+                                <h2 className="text-3xl text-white px-16 lg:px-24 mb-2">{item.title}</h2>
+                                <img src={item.small} alt={`Menu item ${index + 3}`} className="w-full h-full lg:h-80 rounded-lg"/>
                             </div>
                         ))}
                     </div>
