@@ -8,7 +8,7 @@ export default function gallery() {
             <div>
                 <Template images={galleryImages} Heading={"GALLERY"} />
             </div>
-            <Quote />
+            
         </>
     );
 }

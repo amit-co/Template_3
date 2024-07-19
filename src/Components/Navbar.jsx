@@ -39,28 +39,17 @@ export function Navbar() {
 
 
     return (
-        <div className={`fixed top-0 left-0 right-0 transition-transform duration-300`}>
-            <div className={`bg-repeat bg-customDarkG text-white flex px-4 transition-opacity duration-300`}
-                
-            >
+        <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-transform duration-300 border` }>
+            <div className={`bg-repeat bg-customDarkG text-white  flex px-4 transition-opacity duration-300`} >
                 
                     <img
-                        className="md:w-[180px] border py-10 sm:w-[130px] w-[150px] "
+                        className="md:w-[140px] border-r py-10 z-3 cusrsor-pointer sm:w-[130px] w-[150px] "
                         src={logo}
                         alt="Company Logo"
                         onClick={() => navigate("/")}
                 />
-                <h1 className="tracking-widest hidden text-3xl ml-10 w-[850px]">OXBO</h1>
-
-               
-                <div className="absolute right-0 md:flex text-3xl text-customBrown hidden space-x-2 2xl:mr-8 mt-10">
-                    <img src={img1}
-                        className="w-[30px]" />
-                    
-                </div> 
                 
-                <div>
-                    <div className="text-white">
+                <div className="text-white absolute top-0 right-0">
                         {toggle ? (
                             <RxCross2
                                 onClick={() => setToggle(false)}
@@ -69,16 +58,34 @@ export function Navbar() {
                         ) : (
                             <IoMenuOutline
                                 onClick={() => setToggle(true)}
-                                className="md:hidden cursor-pointer text-3xl"
+                                className="md:hidden cursor-pointer text-3xl "
                             />
                         )}
                     </div>
+                
+                <div className="hidden xl:grid xl:grid-cols-2 md:flex md:space-x-2 lg:space-x-4 2xl:space-x-16">
+                    <h1 className="tracking-widest text-4xl mt-12 ml-4 w-[850px]">R/S Name</h1>
+
+                    <div className="flex flex-row mr-20 space-x-4">
+                        <div className="border-l px-10 hidden sm:block">
+                            <button onClick={() => navigate("/bookNow")} className="text-4xl mt-10">Reservation</button>
+                        </div>
+                        <div className="border-l border-r px-10 hidden sm:block">
+                            <button onClick={() => navigate("/gallery")} className="text-4xl mt-10">Gallery</button>
+                        </div>
+                        <div className="absolute right-1 text-3xl px-6 mt-10 hidden sm:flex 2xl:mr-8">
+                            <img src={img1} className="w-[50px]" onClick={() => navigate("/contact")} />
+                        </div>
+                    </div>
                 </div>
+
+
+              
             </div>
             
 
-            <div className={` bg-repeat w-full transition-all duration-500 ease-in-out text-customBrown text-center pb-8 space-x-1 text-xl bg-customGray z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
-                style={{ backgroundImage: `url(${img})` }}
+            <div className={` bg-customDarkG w-full transition-all duration-500 ease-in-out text-customWhite text-center pb-8 space-x-1 text-xl bg-customDarkG z-10 ${toggle ? "translate-y-0" : "translate-y-[-100vh]"}  absolute`}
+                
             >
                 <Link to="/" className="cursor-pointer ">
                     <h1
