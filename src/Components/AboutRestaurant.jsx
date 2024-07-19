@@ -13,7 +13,7 @@ export function AboutRestaurant() {
         <div className="flex flex-col mx-auto ">
             <div className=" flex flex-col px-8 w-full md:w-9/12   lg:mt-0 mx-auto  border-[2px]">
                 <div className="flex flex-col lg:flex-row mt-10 w-full mx-auto space-x-4">
-                    <img src={h1} className="w-9/12 lg:w-5/12 ml-9" />
+                    <img src={h1} className="w-full lg:w-5/12 ml-0 lg:ml-9 " />
                     
                     <div className="flex flex-col items-center space-x-0 lg:space-x-10 mt-6 sm:mt-8 md:mt-10 lg:mt-14">
                         <h1 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-widest mb-10">Private Dining</h1>
