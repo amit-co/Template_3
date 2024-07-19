@@ -97,16 +97,16 @@ export default function PrivateDinning() {
                                     <img className="w-24 object-contain " src={img3} />
                                     <h1 className="text-4xl tracking-widest text-white font-semibold mt-2">Private Dining</h1>
                                   </div>
-                                <div className="flex mx-auto w-7/12 mt-4">
-                                    <p className="text-sm sm:text-base lg:text-xl text-center font-medium tracking-widest text-customWhite mx-auto mb-10">Our Spaces Are Large Enough To Accomodate Gatherings And Groups With Clever Partitions Or Sliding Panels That Can Be
+                                <div className="flex mx-auto w-full lg:w-7/12 mt-4">
+                                    <p className="text-base sm:text-lg lg:text-xl text-center font-medium tracking-widest text-customWhite mx-auto mb-10">Our Spaces Are Large Enough To Accomodate Gatherings And Groups With Clever Partitions Or Sliding Panels That Can Be
                                     Used To Create Smaller Areas With A Cozier Feel. Seating Arrangements Reflect And Respect Single Diners And Drinkers Too.</p>
                                 </div>       
 
                       
 
                 <div className="flex w-full mx-auto justify-center ">
-                    <form className="md:w-8/12">
-                             <div className="flex md:space-x-10 md:ml-20 flex-wrap mb-6">
+                    <form className="w-full xl:w-8/12">
+                             <div className="flex md:space-x-10 sm:ml-20 flex-wrap mb-6">
                                  <div className="w-full md:w-5/12 mb-6 md:mb-0">
                                         <label className="block text-white tracking-widest text-lg font-medium ">
                                            FIRST NAME
@@ -141,7 +141,7 @@ export default function PrivateDinning() {
 
                                     </div>
                              </div>
-                        <div className="flex md:space-x-10 md:ml-20 flex-wrap mb-6">
+                        <div className="flex md:space-x-10 sm:ml-20 flex-wrap mb-6">
                             <div className="w-full md:w-5/12 mb-6 md:mb-0">
                                                
                                                     <label className="block text-white tracking-widest text-lg font-medium ">
@@ -157,7 +157,7 @@ export default function PrivateDinning() {
                                                     className="appearance-none bg-clip-text text-white px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
                                                   />
                                            </div>
-                            <div className="w-full md:w-5/12 mb-6 md:mb-0">
+                            <div className="w-full md:w-5/12">
                                                 <label className="block text-white tracking-widest text-lg font-medium ">
                                                        SELECT TIME
                                                 </label>
@@ -167,7 +167,7 @@ export default function PrivateDinning() {
                                                 value={formData.time}
                                                 name="time"
                                                 onChange={changeHandler}
-                                                className="appearance-none bg-clip-text text-white md:px-[73px] px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
+                                                className="appearance-none bg-clip-text text-white px-[73px] py-2 border border-customWhite rounded-lg focus:outline-none"
                                               >
                                                     {[
                                                       "16:00",
@@ -197,7 +197,7 @@ export default function PrivateDinning() {
                                         </div>
                                        
                                   </div>
-                        <div className="flex md:space-x-10 md:ml-20 flex-wrap mb-6">
+                        <div className="flex md:space-x-10 sm:ml-20 flex-wrap mb-6">
                             <div className="w-full md:w-5/12 mb-6 md:mb-0">
                                             <label className="block text-white tracking-widest text-lg font-medium " >
                                                 NUMBER OF GUEST
@@ -207,7 +207,7 @@ export default function PrivateDinning() {
                                                 name="people"
                                                 value={formData.people}
                                                 onChange={changeHandler}
-                                    className="appearance-none bg-clip-text text-white md:px-[73px] px-3 py-2 border border-customWhite rounded-lg focus:outline-none"
+                                    className="appearance-none bg-clip-text text-white px-[73px] py-2 border border-customWhite rounded-lg focus:outline-none"
                                             >
                                     {Array.from({ length: 19 }, (_, i) => i + 2).map((number) => (
                                         <option key={number} value={number} className="bg-customDarkG">
@@ -231,7 +231,7 @@ export default function PrivateDinning() {
                                         </div>
                         
                                    </div>
-                                     <div className=" pb-5 w-10/12  mt-4 ml-10 px-10">
+                                     <div className=" pb-5 w-full sm:w-10/12  mt-4 ml-0 sm:ml-10 px-0 sm:px-10">
                                         <div className="flex mt-2 flex-col">
                                           <label className="block text-white tracking-widest text-lg font-medium " >
                                             RESERVATION NOTE
@@ -247,7 +247,7 @@ export default function PrivateDinning() {
                                         </div>
                                      </div>
                                       
-                                                <button onClick={formHandler} className="border rounded-lg font-medium tracking-widest md:ml-20 px-8  py-2 md:text-lg text-customWhite transition-all duration-300">
+                                                <button onClick={formHandler} className="border rounded-lg font-medium tracking-widest ml-2 sm:ml-60 px-8 py-2 md:text-lg text-customWhite transition-all duration-300">
                                                   Find A Table
                                                 </button>
                                      

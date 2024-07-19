@@ -4,6 +4,7 @@ import { Menus } from "../Components/Menus";
 import { RestaurantDetails } from "../Components/RestaurantDetails";
 import imgA from "/New/3bg.png";
 import Gif from "/New/ad.gif";
+import imgB from "/New/uns.png";
 
 
 export default function Home() {
@@ -29,7 +30,9 @@ export default function Home() {
                 <AboutRestaurant />
               
             </Suspense>
-            
+            <div className="flex  bg-cover w-full h-[120px] sm:h-[200px] lg:h-[330px] mt-2 lg:mt-0  border " style={{ backgroundImage: `url(${imgB})` }}>
+
+            </div>
             
         </div>
     );

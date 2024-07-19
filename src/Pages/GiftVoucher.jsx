@@ -14,17 +14,17 @@ export default function Gift() {
                     <h1 className="text-4xl tracking-widest text-white font-semibold mt-2">Gift Voucher</h1>
                 </div>
 
-                <div className="flex w-8/12 rounded-lg mx-auto mt-10 h-72 bg-customGray2 bg-opacity-50  ">
+                <div className="flex w-full lg:w-8/12 rounded-lg mx-auto mt-10 h-72 bg-customGray2 bg-opacity-50  ">
                 </div>
 
 
 
-                <div className="grid grid-cols-2 divide-x-2 mx-auto w-8/12  mt-10">
-                    <div className="mr-10">
-                    <p className="text-sm sm:text-base lg:text-xl text-left font-medium tracking-widest text-customWhite ">Give The Ultimate Gift To Someone Special With An Exciting Experience.This Voucher Is Valid 48 Hours After Purchase , For 12 Months.
+                <div className="grid grid-cols-2 divide-x-2 mx-auto w-full lg:w-8/12  mt-10">
+                    <div className="mr-6">
+                    <p className="text-sm ml-4 sm:text-base lg:text-xl text-left  tracking-widest text-customWhite ">Give The Ultimate Gift To Someone Special With An Exciting Experience.This Voucher Is Valid 48 Hours After Purchase , For 12 Months.
                         </p>
                     </div>
-                    <div>
+                    <div className="mr-4">
                         <Discount />
                         </div>
                 </div>
