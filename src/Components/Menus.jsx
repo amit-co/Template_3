@@ -20,7 +20,7 @@ export function Menus() {
                 <p className="text-white text-xl sm:text-2xl tracking-widest md:text-3xl font-bold lg:text-5xl mx-auto  ">VENUE</p>
                 <div className="grid grid-cols-3 divide-x-4  text-center font-bold  text-white ">
                     <h1 onClick={() => navigate("/venue/cafe")} className=" text-sm sm:text-lg md:text-3xl lg:text-4xl mt-2 mb-4 md:mt-10 tracking-widest">CAFE</h1>
-                    <h1 onClick={() => navigate("//venue/bar")} className=" text-sm sm:text-lg md:text-3xl lg:text-4xl mt-2 mb-4 md:mt-10 tracking-widest">BAR</h1>
+                    <h1 onClick={() => navigate("/venue/bar")} className=" text-sm sm:text-lg md:text-3xl lg:text-4xl mt-2 mb-4 md:mt-10 tracking-widest">BAR</h1>
                     <h1 onClick={() => navigate("/venue/ird")} className=" text-sm sm:text-lg md:text-3xl lg:text-4xl mt-2 mb-4 md:mt-10 tracking-widest ml-4 ">DINING</h1>
                     </div>
            </div>
