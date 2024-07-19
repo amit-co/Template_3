@@ -73,10 +73,10 @@ export function Navbar() {
 
                     <div className="flex flex-row mr-16 space-x-2">
                         <div className="border-l px-10 hidden sm:block">
-                            <button onClick={() => navigate("/bookNow")} className="text-3xl mt-10">Reservation</button>
+                            <button onClick={() => navigate("/bookNow")} className="text-3xl mt-8">Reservation</button>
                         </div>
                         <div className="border-l border-r px-10 hidden sm:block">
-                            <button onClick={() => navigate("/gallery")} className="text-3xl mt-10">Gallery</button>
+                            <button onClick={() => navigate("/gallery")} className="text-3xl mt-8">Gallery</button>
                         </div>
                        
                             <div className="absolute right-1 text-3xl px-6 mt-6 hidden sm:flex">
