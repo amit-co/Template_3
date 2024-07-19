@@ -1,4 +1,3 @@
-import { RestrauntLocation } from "./RestrauntLocation";
 import { useNavigate } from "react-router-dom";
 import { Timings } from "./Timings";
 import h1 from "/New/restaurant 1.png";

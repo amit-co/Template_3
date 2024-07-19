@@ -79,9 +79,9 @@ export function Navbar() {
                             <button onClick={() => navigate("/gallery")} className="text-3xl mt-10">Gallery</button>
                         </div>
                        
-                            <div className="absolute right-1 text-3xl px-6 mt-6 hidden sm:flex">
+                            <button className="absolute right-1 text-3xl px-6 mt-6 hidden sm:flex">
                             <img src={img1} className="w-[50px] mr-8" onClick={scrollToEnd} />
-                            </div>
+                            </button>
                     </div>
                 </div>
 
