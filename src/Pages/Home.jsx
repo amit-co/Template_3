@@ -29,9 +29,7 @@ export default function Home() {
                 <AboutRestaurant />
               
             </Suspense>
-            <div className="flex  bg-cover w-full h-[330px] mt-2 lg:mt-0  border " style={{ backgroundImage: `url(${imgB})` }}>
-           
-            </div>
+            
             
         </div>
     );

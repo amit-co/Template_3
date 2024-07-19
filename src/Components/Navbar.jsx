@@ -71,18 +71,16 @@ export function Navbar() {
                 <div className="hidden xl:grid xl:grid-cols-2 md:flex md:space-x-2 lg:space-x-4 2xl:space-x-28">
                     <h1 className="tracking-widest text-3xl mt-8 ml-4 w-[850px]">R/S Name</h1>
 
-                    <div className="flex flex-row mr-20 space-x-2">
+                    <div className="flex flex-row mr-16 space-x-2">
                         <div className="border-l px-10 hidden sm:block">
                             <button onClick={() => navigate("/bookNow")} className="text-3xl mt-10">Reservation</button>
                         </div>
                         <div className="border-l border-r px-10 hidden sm:block">
                             <button onClick={() => navigate("/gallery")} className="text-3xl mt-10">Gallery</button>
                         </div>
-                        <div className="absolute right-1 text-3xl px-6 mt-8 hidden sm:flex ">
-                            <img src={img1} className="w-[50px] mr-8" onClick={() => navigate("/contact")} />
-                        </div>
-                            <div className="absolute right-1 text-3xl px-6 mt-10 hidden sm:flex 2xl:mr-8">
-                            <img src={img1} className="w-[50px]" onClick={scrollToEnd} />
+                       
+                            <div className="absolute right-1 text-3xl px-6 mt-6 hidden sm:flex">
+                            <img src={img1} className="w-[50px] mr-8" onClick={scrollToEnd} />
                             </div>
                     </div>
                 </div>
