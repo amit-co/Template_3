@@ -130,10 +130,10 @@ export default function Contact() {
                
                 </div>
                 <div className="flex w-full mx-auto justify-center">
-                        <form class="w-full max-w-lg mr-96">
-                            <div class="flex w-full">
+                        <form className="w-full max-w-lg mr-96">
+                            <div className="flex w-full">
                                 <div className="w-full md:w-1/2  mb-6  md:mb-0">
-                                    <label className="block text-black-700 tracking-widest text-xl font-medium mb-2" htmlFor="fname">First Name :{" "}</label>
+                                    <label className="block text-black-700 tracking-widest text-xl font-medium mb-2" >First Name :{" "}</label>
                                     <input
                                         type="text"
                                         onChange={changeHandler}
@@ -144,8 +144,8 @@ export default function Contact() {
                                     />
                                     {errors.name && <h1 className="text-red-500 text-sm">{errors.name}</h1>}
                                 </div>
-                                <div class="w-full md:w-1/2 ml-48 ">
-                                    <label class="block  tracking-widest text-black-700 text-xl font-medium mb-2" htmlFor="lname">Last Name :{" "}</label>
+                                <div className="w-full md:w-1/2 ml-48 ">
+                                    <label className="block  tracking-widest text-black-700 text-xl font-medium mb-2" >Last Name :{" "}</label>
                                     <input
                                         type="text"
                                         onChange={changeHandler}
@@ -156,9 +156,9 @@ export default function Contact() {
                                     />
                                 </div>
                             </div>
-                            <div class="flex flex-nowrap  mb-2">
+                            <div className="flex flex-nowrap  mb-2">
                                 <div className="w-full md:w-1/2   md:mb-0">
-                                    <label className="block text-black-700 tracking-widest text-xl font-medium mb-2" htmlFor="email">Email ID:{" "}</label>
+                                    <label className="block text-black-700 tracking-widest text-xl font-medium mb-2" >Email ID:{" "}</label>
                                     <input
                                         type="text"
                                         id="email"
@@ -169,8 +169,8 @@ export default function Contact() {
                                     />
                                     {errors.email && <h1 className="text-red-500 text-sm">{errors.email}</h1>}
                                 </div>
-                            <div class="w-full md:w-1/2 ml-48 ">
-                                    <label class="block tracking-widest text-black-700 text-xl font-medium mb-2" htmlFor="contact">Contact Number :{" "}</label>
+                            <div className="w-full md:w-1/2 ml-48 ">
+                                    <label className="block tracking-widest text-black-700 text-xl font-medium mb-2" >Contact Number :{" "}</label>
                                     <input
                                         type="text"
                                         onChange={changeHandler}
@@ -181,9 +181,9 @@ export default function Contact() {
                                     />
                                 </div>
                             </div>
-                            <div class="flex flex-wrap ">
-                                <div class="w-full ">
-                                    <label class="block tracking-widest text-black-700 text-xl font-medium mb-2" for="write-your-message">
+                            <div className="flex flex-wrap ">
+                                <div className="w-full ">
+                                    <label className="block tracking-widest text-black-700 text-xl font-medium mb-2" >
                                         Write your message :
                                     </label>
                                     <textarea

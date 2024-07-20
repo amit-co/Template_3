@@ -27,15 +27,26 @@ export function RestaurantDetails() {
                     <button onClick={() => navigate("/menu")} className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-8">Learn More About Us</button>
                     <button onClick={clickHandler} className="rounded-full  text-customWhite text-sm sm:text-sm md:text-lg lg:text-xl tracking-widest border-customWhite border-[1px] mx-auto px-5 py-3 mb-10">Find A Table</button>
                     <h1 className="mx-auto text-xl sm:text-4xl md:text-5xl lg:text-6xl text-customWhite tracking-widest">What's On Menu ?</h1>
-                    <div className="flex  flex-col  sm:flex-row sm:space-x-4 lg:flex-row md:space-x-4 space-y-4 mt-10 mb-10 mx-auto ">
-                        <div className="relative group  overflow-hidden">
-                        <img src={img1} className="mb-2 mt-4 w-[289px] lg:w-full md:h-full h-[252px] lg:h-full xl:h-[520px]  transition duration-300 ease-in-out transform  hover:scale-105" />
+                    <div className="grid grid-cols-3 space-x-8 -mb-12 mt-4  sm:hidden">
+                        <h1 className="text-white text-auto">In Room Dining</h1>
+                        <h1 className="text-white text-auto ">Cafe</h1>
+                        <h1 className="text-white text-auto">Beverage</h1>
+                    </div>
+                    <div className="flex  flex-col  sm:flex-row grid grid-cols-3 space-x-3 sm:space-x-4 lg:flex-row md:space-x-4 space-y-4 mt-10 mb-4 mx-auto ">
+                        
+                        <div className="relative group overflow-hidden">
+                        <img src={img1} className="mb-2 rounded-lg sm:rounded-none mt-4 w-[289px] lg:w-full md:h-full h-[252px] lg:h-full xl:h-[520px]  transition duration-300 ease-in-out transform  hover:scale-105" />
                         <div className="absolute top-0 right-0 m-4 xl:m-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                             <h2 className="text-5xl">IN ROOM DINING</h2>
                             </div>
                             </div>
-                       
-                        <div className="flex flex-col space-y-4">
+                        <div className="relative group sm:hidden  overflow-hidden ">
+                            <img src={img2} className="w-[289px] h-[252px] rounded-lg transition duration-300 ease-in-out transform hover:scale-105" />
+                            <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                                <h2 className="text-5xl">Beverage</h2>
+                            </div>
+                        </div>
+                        <div className="flex flex-col hidden sm:block space-y-4">
                             <div className="relative group  overflow-hidden ">
                             <img src={img5} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105 " />
                             <div className="absolute top-0 right-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
@@ -51,22 +62,23 @@ export function RestaurantDetails() {
                         </div>
                         <div className="flex flex-col space-y-4">
                             <div className="relative group  overflow-hidden">
-                                <img src={img4} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105" />
+                                <img src={img4} className="w-[289px] h-[252px] rounded-lg sm:rounded-none transition duration-300 ease-in-out transform hover:scale-105" />
                                 <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-5xl">Cafe</h2>
                                 </div>
                             </div>
-                            <div className="relative group  overflow-hidden ">
+                            <div className="relative group hidden sm:block overflow-hidden ">
                                 <img src={img2} className="w-[289px] h-[252px] transition duration-300 ease-in-out transform hover:scale-105" />
                                 <div className="absolute top-0 left-0 m-2 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
                                     <h2 className="text-5xl">Beverage</h2>
                                 </div>
                             </div>
                             
-                            </div>
+                        </div>
                         
-
-
+                    </div>
+                    <div className="flex mx-auto mb-4 sm:hidden">
+                        <button className="text-white border rounded-lg px-4 py-2">See More</button>
                     </div>
                 </div>
             </div>
