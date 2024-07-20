@@ -58,17 +58,17 @@ export function Navbar() {
                         {toggle ? (
                             <RxCross2
                                 onClick={() => setToggle(false)}
-                                className="md:hidden cursor-pointer text-4xl"
+                                className="xl:hidden cursor-pointer text-4xl"
                             />
                         ) : (
                             <IoMenuOutline
                                 onClick={() => setToggle(true)}
-                                className="md:hidden cursor-pointer text-3xl "
+                                className="xl:hidden cursor-pointer text-3xl "
                             />
                         )}
                     </div>
                 
-                <div className="hidden xl:grid xl:grid-cols-2 md:flex md:space-x-2 lg:space-x-4 2xl:space-x-28">
+                <div className="hidden xl:grid xl:grid-cols-2 xl:flex md:space-x-2 lg:space-x-4 2xl:space-x-28">
                     <h1 className="tracking-widest text-3xl mt-8 ml-4 w-[850px]">R/S Name</h1>
 
                     <div className="flex flex-row mr-16 space-x-2">
@@ -99,14 +99,6 @@ export function Navbar() {
                         onClick={() => setToggle(false)}
                     >
                         HOME
-                    </h1>
-                </Link>
-                <Link to="/bookNow" className="w-fit mx-auto relative cursor-pointer">
-                    <h1
-                        className="hover:text-customPink"
-                        onClick={() => setToggle(false)}
-                    >
-                        BOOK NOW
                     </h1>
                 </Link>
 
@@ -229,14 +221,6 @@ export function Navbar() {
                         </div>
 
                     )}
-                </Link>
-                <Link to="/about" className="relative cursor-pointer">
-                    <h1
-                        className="hover:text-customPink"
-                        onClick={() => setToggle(false)}
-                    >
-                        ABOUT
-                    </h1>
                 </Link>
             </div>
 
