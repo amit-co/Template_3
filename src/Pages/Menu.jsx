@@ -66,7 +66,7 @@ export default function Menu({ page }) {
                                 className="flex flex-col cursor-pointer w-full lg:w-[450px] p-10"
                                 onClick={() => handleMenuOpen(item.large)}
                             >
-                                <h2 className="text-3xl text-white px-16 lg:px-24 mb-2">{item.title}</h2>
+                                <h2 className="text-3xl sm:text-5xl text-white px-16 lg:px-24 mb-2">{item.title}</h2>
                                 <img src={item.small} alt={`Menu item ${index + 3}`} className="w-full h-full lg:h-80 rounded-lg"/>
                             </div>
                         ))}
