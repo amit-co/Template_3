@@ -49,7 +49,7 @@ export default function Template({ images, Heading }) {
                                     <div className="text-center mt-2">
                                         <button
                                             onClick={handleLoadMore}
-                                            className="text-customWhite text-lg mt-5  tracking-widest rounded-lg w-fit px-8 py-2 font-semibold border transition-all cursor-pointer duration-300 "
+                                            className="text-customWhite text-lg mt-5  mb-6 tracking-widest rounded-lg w-fit px-8 py-2 font-semibold border transition-all cursor-pointer duration-300 "
                                         >
                                             Load More
                                         </button>

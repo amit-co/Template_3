@@ -17,11 +17,11 @@ export function Footer() {
         <div className="flex h-[2px] bg-white"></div>
         <div className="flex flex-col lg:flex-row space-x-0 lg:space-x-28 bg-customDarkG ">
             
-            <div className="flex sm:ml-16 ml-28 flex-col">
+            <div className="flex sm:ml-16 ml-12 md:ml-24 flex-col">
                 <img src={logo} className="object-contain ml-10 mt-8 w-[200px]" alt="Company Logo" onClick={() => navigate('/')} />
 
 
-                <div className="flex flex-col ml-10 text-customWhite">
+                <div className="flex flex-col ml-2  text-customWhite">
                     <p className="mt-2">SIGN TO OUR NEWSLETTER FOR </p>
                     <p> UPDATES AND SPECIAL DEALS.</p>
                 </div>
@@ -36,7 +36,7 @@ export function Footer() {
                 </div>
 
 
-                <div className="flex sm:flex-row flex-col  space-x-6 items-center mb-0 lg:mb-4 sm:mt-16 mr-32 sm:mr-0 mb-6 sm:mb-0 lg:mt-4">
+                <div className="flex sm:flex-row flex-col  space-x-6 items-center mb-0 lg:mb-4 sm:mt-16 mr-20 sm:mr-0 mb-6 sm:mb-0 lg:mt-4">
                     <h3 className=" text-customWhite text-2xl tracking-widest font-medium mb-4 mt-4">Follow Us</h3>
                     <div className="flex space-x-4 ">
                         <a href="https://www.facebook.com/yourprofile">
